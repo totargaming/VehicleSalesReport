@@ -1,0 +1,30 @@
+After finishing the EDA let's see what we have.
+
+1. We have 558837 rows and 16 columns at first after importing the data. These 16 columns have 5 integer type columns and rest 11 are object or we can say string type columns.
+
+2. As per the statistical analysis we can say that the Manheim Market Report (MMR) and Selling Price are quite close. The max of odometer is 999999 which seems very high but it is not impossible.
+
+3. We have some cars manufactured in 1982 this might result as having some Vintage Cars in the dataset.
+
+4. There are lots of missing values in dataset. Transmission has the highest missing values about 13% which is quite high. Other than this Make, Model, Trim, Body, and Condition have 1%-2% missing values. Besides these other have less than 1% missing values.
+5. We have Year and Sale date columns which should be of datetime data type but they are in int and object type so we'll convert them.
+6. The condition column have values such as 45, 59, 34 etc but this is not correct as it is a column which should have values between 1-5 as rating.
+7. The 'Color' and 'Interior' columns has data point with values '-' which replaced by 'Multicolor' as we don't want to add more values to a particular color.
+8. 'Body' column values have some inconsistensies like Sedan, sedan or SUV, suv.
+9. Ford, Chevrolet, Nissan, Toyota, and Dodge are the top 5 brands by the count.
+10. Sedan and SUV are the top 2 body types used in cars.
+11. Automtic transmission is most counted, it also maked the dataset imbalanced based on transmission.
+12. There are different color cars but 'Black' and 'Grey' are the most used interior color.
+13. Florida and California have 70k-80k and more cars while all other are below 50k cars.
+14. The minimum and maximum of manufactured year of car is 2000 and 2015 but there are some outlier cars whose manufactured year is 1990 or less.
+15. Most of the condition of cars come between 2 to 4 rating but there are some cars whose condition is either 1 or 5 too.
+16. The maximum of odometer display is about 200000 but there are many outliers too such as some cars even travelled 999999 which looks very inconvincing.
+17. The MMR and Selling price is quite identical. There is high spike of cars between the prices of 10000-20000 and both are right skewed data.
+18. The Sale date of cars are from year 2015 and last two months of year 2014 whereas the first quarter of year 2014 is treated as outlier.
+19. The correlation of the columns fall between -0.78 to 0.98, which is an indication that there is some multicolinearity.
+20. The avearge car price of costliest car is Rolls Royce with price of $153456.25 while the cheapest car is DOdge with price of $450.00.
+21. The sellin price of automatic transmission car brands is highest besides of two brands Land Rover and Lotus. Lotus does not have car of automatic transmission while Rolls-Royce does not have car of manual transmission.
+22. Our scatterplot and also regplot shows that MMR and Selling Price is very much correlated but it also showing there are some of data points which are very much off in respect of other.
+23. Car color and Interior color is not very affecting variable for the Selling price.
+24. The distance travelled by car and selling price does have a negative relation but it is not vey much decisive in case of Selling price.
+25. Cars manufactured after year 2000 shows and upward trend in respect of Selling price. While there is no trend between sale date and selling price, it just kind of random walk.
